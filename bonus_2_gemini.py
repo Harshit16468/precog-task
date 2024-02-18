@@ -12,12 +12,9 @@ genai.configure(api_key='AIzaSyB42LYqlVwiGxiHO8Rh8u1tElxNkBX82-U')
 
 # Define the model and words.
 model = genai.GenerativeModel('gemini-pro')
-word1 = "old"
-word2 = "new"
-
 results_list = []
 ground_truth=[]
-for i in tqdm(range(len(test_data))):
+for i in tqdm(range(len(100))):
     word1=test_data[i]["phrase1"]
     word2=test_data[i]["phrase2"]
     ground_truth.append(test_data[i]["label"])
@@ -34,6 +31,6 @@ for i in tqdm(range(len(test_data))):
     except Exception as e:
         print(f"Error: {e}")
         results_list.append(0) 
-    time.sleep(1)
+    time.sleep(2)
 test_accuracy = accuracy_score(ground_truth, results_list)
 print("test accuracy with threshold: ", test_accuracy*100)
