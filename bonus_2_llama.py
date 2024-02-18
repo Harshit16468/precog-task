@@ -3,6 +3,7 @@ from llamaapi import LlamaAPI
 from datasets import load_dataset
 # Initialize the SDK
 from tqdm import tqdm
+from sklearn.metrics import accuracy_score
 
 llama = LlamaAPI("LL-TjBIYKOUDEobSmG8BgMUXNWMbDnGdSPLMvKWRPqRSrjou6cWD4PboILnJJaOjJII")
 word1="old"
