@@ -14,7 +14,7 @@ genai.configure(api_key='AIzaSyB42LYqlVwiGxiHO8Rh8u1tElxNkBX82-U')
 model = genai.GenerativeModel('gemini-pro')
 results_list = []
 ground_truth=[]
-for i in tqdm(range(len(100))):
+for i in tqdm(range(100)):
     word1=test_data[i]["phrase1"]
     word2=test_data[i]["phrase2"]
     ground_truth.append(test_data[i]["label"])
